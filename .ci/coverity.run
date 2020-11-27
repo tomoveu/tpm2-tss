@@ -3,6 +3,9 @@
 
 set -eo pipefail
 
+# Override project to the old project name becuase coverity didn't understand the rename from
+# 01org/TPM2.0-TSS to tpm2-software/tpm2-tss
+export PROJECT='01org/TPM2.0-TSS'
 echo "PROJECT=$PROJECT"
 
 if [ -z "$COVERITY_SCAN_TOKEN" ]; then
